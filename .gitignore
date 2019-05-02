@@ -1,0 +1,7 @@
+#visual stdio struff 
+*.sln
+*.vcxproj
+
+*.vcxproj.filters
+
+*.vcxproj.user
