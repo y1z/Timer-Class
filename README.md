@@ -1,2 +1,2 @@
 # contents 
-This is just a clase that measures time.
+This is just a class that measures time.
