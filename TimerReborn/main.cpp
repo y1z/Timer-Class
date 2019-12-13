@@ -3,31 +3,23 @@
 #include <cinttypes>
 #include <iostream>
 #include "Timer.h"
-//using CurrentTime = std::chrono::high_resolution_clock::time_point
 
-int main() {
+int main()
+{
+  Timer timer;
 
-	//T_P Start = std::chrono::high_resolution_clock::now();
+  timer.StartTiming();
 
-	//std::this_thread::sleep_for(3s);
+  std::this_thread::sleep_for(std::chrono::seconds(3));
 
-	//T_P End = std::chrono::high_resolution_clock::now();
-	Timer timer;
+  timer.EndTiming();
 
-	timer.StartTiming();
+  timer.PrintResult();
 
-	std::this_thread::sleep_for(std::chrono::seconds(3));
 
-	timer.EndTiming();
+  std::cin.ignore();
+  std::cout << "press enter 2 times ";
+  std::cin.get();
 
-	timer.StartTiming();
-
-	std::this_thread::sleep_for(std::chrono::seconds(2));
-
-	timer.EndTiming();
-
-	std::cin.ignore();
-	std::cin.get();
-
-	return 0;
+  return 0;
 }
